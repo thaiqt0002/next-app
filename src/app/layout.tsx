@@ -1,13 +1,17 @@
-import '@/app/ui/global.css';
- 
+import '@/ui/global.css';
+import Navbar  from './home/navbar'
+
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html>    
+      <body className='flex flex-col min-h-screen bg-[#f5f5fa] relative'>  
+        <Navbar/>
+        {children}
+      </body>
     </html>
   );
 }
